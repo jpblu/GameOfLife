@@ -1,0 +1,26 @@
+<div class="row">
+
+    <h2>Game Of Life</h2>
+
+    <div class="col-6 mt-3">
+        
+        <p>Please select input Generation file:</p>
+        <%= form_with url: "/check", multipart: true do |form| %>
+            
+            <div class="col-12">
+                <div class="input-group mb-3">
+                    <%= form.file_field :inputfile, class: 'form-control', required: true %>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="input-group mb-3">
+                    <%= form.submit 'Upload', class: 'btn btn-primary' %>
+                </div>
+            </div>
+
+        <% end %>
+
+    </div>
+    
+</div>
