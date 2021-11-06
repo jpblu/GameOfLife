@@ -1,21 +1,18 @@
 <div class="container ms-auto col-6">
 
     <div class="row">
-
+        <div class="alert alert-info" role="alert">
+            Simulation End
+        </div>
         <div class="card">
             <div class="card-body">
-                Generation: <b><%=@grid[0] %></b><br>
-                <br>
-                <br>
-                <table style="border-collapse: collapse;">
-               
-                    <%= render 'game/grid' %>
+                <h5>Game Of Life</h5>
+                <p>Generation: <b><%= @out[:gen] %></b></p>
+                
+                <%= render 'game/grid' %>
 
-                </table>
                 <div class="d-grid mt-3 gap-2 d-md-block">
-                    <input type="range" class="form-range" min="0.1" max="1" id="speed">
-                    <button type="button" class="btn btn-primary" id="pause">Pause</button>
-                    <button type="button" class="btn btn-primary" id="gotoend">Go To End</button>
+                    <a href="/" class="btn btn-primary mt-3">Home</a>
                 </div>
             </div>
         </div>
