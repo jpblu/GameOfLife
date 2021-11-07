@@ -45,19 +45,16 @@ class Game
 
         #Check last Generation (#force loop break at 100)
         if @grid.sort != @new_grid.sort and @gen < 100
-            #Print New Grid
             @gen += 1            
-            puts
-            puts "Generation: "+@gen.to_s
-            print @new_grid.map{|row| row.join(" ")}.join("\n")
-
-            print_to_view
+            
+            #Print New Grid            
+            ##puts "Generation: "+@gen.to_s
+            ##print @new_grid.map{|row| row.join(" ")}.join("\n")
+            print_to_view            
 
             @grid = @new_grid
             execute_again
         else
-            puts
-            puts "Exit"
             return  { gen: @gen, grid: @new_grid }
         end
 
@@ -90,6 +87,8 @@ class Game
     end
 
     def print_to_view
+        #Print Grid to <table> view
+        
         table = '<table style="border-collapse: collapse;">'
         @new_grid.each do |row|
             table << '<tr>'
