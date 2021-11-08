@@ -24,10 +24,10 @@
                         <%= form_with url: "/game", method: :post do |form| %>
 
                             <div class="d-grid gap-2 d-md-block">
-                                <%= form.hidden_field :gol_gen, value: @gol_gen %>
-                                <%= form.hidden_field :gol_row, value: @gol_row %>
-                                <%= form.hidden_field :gol_col, value: @gol_col  %>
-                                <%= form.hidden_field :grid, value: @grid.to_json  %>
+                                <%= form.hidden_field :gol_gen, value: @isvalid[:gol_gen] %>
+                                <%= form.hidden_field :gol_row, value: @isvalid[:gol_row] %>
+                                <%= form.hidden_field :gol_col, value: @isvalid[:gol_col]  %>
+                                <%= form.hidden_field :grid, value: @isvalid[:grid].to_json  %>
                                 <div class="d-flex text-primary align-items-center col-6 mt-3">
                                     <i class="fas fa-tachometer-alt"></i>
                                     <%= form.range_field :speed, min: 0, max: 1, step: 0.1, value: 0.3, class: 'form-range' %>

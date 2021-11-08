@@ -71,7 +71,7 @@ class Check
             @err_out = "Grid not match lines declared. "+@gol_row.to_s+" declared, "+(i-2).to_s+" present."
         end
 
-        return { grid: @grid, valid: @isvalid, err_out: @err_out }
+        return { grid: @grid, gol_gen: @gol_gen, gol_row: @gol_row, gol_col: @goo_col, valid: @isvalid, err_out: @err_out }
 
     end
 
