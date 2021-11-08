@@ -12,7 +12,7 @@
                     <p>Grid: <b><%=@gol_row %></b> x <b><%=@gol_col %></b></p>
                     
                     <table style="border-collapse: collapse;" id="showgrid">
-                    <%  @grid.each do |row| %>
+                    <%  @out.each do |row| %>
                         <tr>
                         <%  row.each do |col| %>
                                 <td class="<%if col == 0 %>bg-light <% else %> bg-danger <% end %>" style="width: 20px; height: 20px; border: 1px solid black;"></td>
