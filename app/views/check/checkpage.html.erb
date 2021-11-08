@@ -8,8 +8,8 @@
             <div class="card">
                 <div class="card-body">
                     <h5>Game Input</h5>
-                    <p>Generation: <b><span id="showgen"><%=@gol_gen %></span></b></p>
-                    <p>Grid: <b><%=@gol_row %></b> x <b><%=@gol_col %></b></p>
+                    <p>Generation: <b><span id="showgen"><%=@isvalid[:gol_gen] %></span></b></p>
+                    <p>Grid: <b><%=@isvalid[:gol_row] %></b> x <b><%=@isvalid[:gol_col] %></b></p>
                     
                     <table style="border-collapse: collapse;" id="showgrid">
                     <%  @isvalid[:grid].each do |row| %>
