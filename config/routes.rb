@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'home#index'
-  post '/check', controller: 'check', action: 'upload'
+  root 'game#index'
+  post '/upload', controller: 'game', action: 'upload'
   post '/game', controller: 'game', action: 'start'
+  post '/stop', controller: 'game', action: 'stop'
 end

@@ -9,7 +9,7 @@
                 <h5>Game Of Life</h5>
                 <p>Generation: <b><%= @out[:gen] %></b></p>
                 
-                <%= render 'game/grid' %>
+                <%= render 'game/grid', locals: { game: @out } %>
 
                 <div class="d-grid mt-3 gap-2 d-md-block">
                     <a href="/" class="btn btn-primary mt-3">Home</a>

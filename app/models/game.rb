@@ -44,7 +44,9 @@ class Game
         end
 
         #Check last Generation (#force loop break at 100)
-        if @grid.sort != @new_grid.sort and @gen < 100
+        status = Rails.cache.read('game-status')
+        puts "[GAME STATUS] #{status}"
+        if @grid.sort != @new_grid.sort && status == 'running'
             @gen += 1            
             
             #Print New Grid            
@@ -55,7 +57,7 @@ class Game
             @grid = @new_grid
             execute_again
         else
-            return  { gen: @gen, grid: @new_grid }
+            { gen: @gen, grid: @new_grid }
         end
 
     end
